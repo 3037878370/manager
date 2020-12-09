@@ -20,6 +20,7 @@ Route::get('/admin','admin\LoginController@index');
 // 后台登录表单提交
 Route::post('/admin/login','admin\LoginController@doLogin');
 Route::get('/admin/index', 'admin\IndexController@index');
+Route::get('welcome', 'admin\IndexController@welcome');
 
 
 Route::get('style', 'admin\ViewController@style');

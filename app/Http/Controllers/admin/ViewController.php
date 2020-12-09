@@ -22,4 +22,6 @@ class ViewController extends Controller
     public function lefter(){
         return view('admin.public.lefter');
     }
+
+    
 }

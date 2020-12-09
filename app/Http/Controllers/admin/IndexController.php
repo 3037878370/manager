@@ -15,6 +15,15 @@ class IndexController extends Controller
         $admin = session()->get('member');
 
 
-        return view('admin/index', ['admin', $admin]);
+        return view('admin/index')->with('admin', $admin);
+    }
+
+    public function welcome(){
+        if(!session()->get('member')){
+            return back();
+        }
+        $admin = session()->get('member');
+
+        return view('admin.welcome')->with('admin', $admin);
     }
 }
